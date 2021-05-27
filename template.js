@@ -3,7 +3,7 @@ export default () => {
     <html lang="en">
         <head>
             <meta charset="utf-8"></meta>
-            <title>Study-Room.io Kickstart</title>
+            <title>StudyRoom.io Kickstart</title>
         </head>
         <body>
             <div id="root"></div>
