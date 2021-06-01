@@ -1,14 +1,13 @@
 export default () => {
     return `<!doctype html>
-    <html lang="en">
+      <html lang="en">
         <head>
-            <meta charset="utf-8"></meta>
-            <title>StudyRoom.io Kickstart</title>
+          <meta charset="utf-8">
+          <title>StudyRoom Dashboard</title>
         </head>
         <body>
-            <div id="root"></div>
-            <script type="text/javascript" src="/dist/bundle.js">
-            </script>
+          <div id="root"></div>
+          <script type="text/javascript" src="/dist/bundle.js"></script>
         </body>
-    </html>`
+      </html>`
 }

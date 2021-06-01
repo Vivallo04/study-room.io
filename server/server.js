@@ -1,8 +1,8 @@
-import express from 'express'
-import devBundle from "./devBundle"
-import path from 'path'
-import {MongoClient} from 'mongodb'
-import template from './../template'
+import express from 'express';
+import devBundle from "./devBundle";
+import path from 'path';
+import {MongoClient} from 'mongodb';
+import template from './../template';
 
 
 const app = express();

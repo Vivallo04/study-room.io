@@ -1,13 +1,5 @@
-import React from 'react'
-import {hot} from 'react-hot-loader'
+import React from 'react';
+import {render} from 'react-dom';
+import HelloWorld from './dashboard';
 
-
-const HelloWorld = () => {
-    return (
-        <div>
-            <h1>Hello World in StudyRoom</h1>
-        </div>
-    );
-}
-
-export default hot(module) (HelloWorld);
+render(<HelloWorld/>, document.getElementById('root'));
