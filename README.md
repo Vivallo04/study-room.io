@@ -1,3 +1,3 @@
 # study-room.io
 
-[!logo](docs/logo-banner.png)
+![Logo](docs/logo-banner.png)
