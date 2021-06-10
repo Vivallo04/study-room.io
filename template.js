@@ -6,7 +6,7 @@ export default () => {
           <title>StudyRoom Dashboard</title>
         </head>
         <body>
-          <div id="root">Hola Mundo XD</div>
+          <div id="root">This site is currently in construction...</div>
           <script type="text/javascript" src="/dist/bundle.js"></script>
         </body>
       </html>`
