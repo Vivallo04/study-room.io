@@ -2,4 +2,6 @@
 
 # study-room.io
 
-[![Node.js Build](https://github.com/Vivallo04/study-room.io/actions/workflows/node.js.yml/badge.svg)](https://github.com/Vivallo04/study-room.io/actions/workflows/node.js.yml)
+![Node.JS Build](https://github.com/Vivallo04/study-room.io/actions/workflows/node.js.yml/badge.svg)](https://github.com/Vivallo04/study-room.io/actions/workflows/node.js.yml)
+
+![Integrate](https://github.com/Vivallo04/study-room.io/actions/workflows/integrate.yml/badge.svg)](https://github.com/Vivallo04/study-room.io/actions/workflows/integrate.yml)
