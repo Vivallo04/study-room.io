@@ -24,7 +24,7 @@ jobs:
            node-version: '15.4.0'
       - run: yarn install
       - run: yarn run build 
-      - run: yarn run test --passWithNoTests
+      - run: yarn run test 
 
       - name: Build and push Docker images
         uses: docker/build-push-action@v2.5.0
