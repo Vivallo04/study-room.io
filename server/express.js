@@ -9,9 +9,7 @@ import template from './../template';
 
 
 // Modules for the server side rendering
-
-
-
+import authRoutes from './routes/auth.routes';
 
 /**
  * To handle HTTP requets and serve responses:
@@ -37,6 +35,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+app.use('/', authRoutes);
 app.use(cookieParser());
 app.use(compress());
 app.use(helmet());
@@ -44,6 +43,19 @@ app.use(cors());
 
 app.get('/', (req, res) => {
     res.status(200).send(template())
+});
+
+app.use((err, req, res, next ) => {
+    if (err.name === "UnauthorizedError") {
+        res.status(401).json({
+            "error": err.name + ":" + err.message
+        });
+    } else if (error) {
+        res.status(400).json({
+            "error": err.name + ":" + error.message
+        });
+        console.log(err);
+    }
 });
 
 
