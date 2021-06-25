@@ -22,9 +22,7 @@ const signin = async (req, res) => {
             });
         }
 
-        const token = jwt.sign({
-            _id = user._id
-        }, config.jwtSecret);
+        const token = jwt.sign({ _id: user._id}, config.jwtSecret);
 
         res.cookie('t', token, {
             expire: new Date() + 9999
@@ -65,9 +63,10 @@ const signout = async (req, res) => {
  * is valid, append the verified user's ID to an 'auth' key 
  * to the request object. Otherwise, throw an error. 
  */
-const requireSignin = espressJwt({
+const requireSignin = expressJwt({
     secret: config.jwtSecret,
-    userProperty: 'auth'
+    userProperty: 'auth', 
+    algorithms: ['RS256']
 });
 
 
