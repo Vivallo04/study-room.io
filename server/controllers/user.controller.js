@@ -24,7 +24,7 @@ const create = async (req, res, next) => {
 
 
 const list = (req, res) => {
-
+    
 ;}
 
 const userByID = async (req, res, next, id) => {
