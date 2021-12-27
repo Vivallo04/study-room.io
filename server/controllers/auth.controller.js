@@ -57,12 +57,14 @@ const signout = async (req, res) => {
     });
 };
 
+
 /**
  * Verify that the incoming request has a valid
  * JWT in the Authorization Header. If the token 
  * is valid, append the verified user's ID to an 'auth' key 
  * to the request object. Otherwise, throw an error. 
  */
+// ExpressJWT Constructor
 const requireSignin = expressJwt({
     secret: config.jwtSecret,
     userProperty: 'auth', 
@@ -71,7 +73,7 @@ const requireSignin = expressJwt({
 
 
 const hasAuthorization = (req, res, next) => {
-    const authorized = req.profile && req.auth && req.profile._id == req.auth._id;
+    const authorized = req.profile && req.auth && req.profile._id === req.auth._id;
     if (!(authorized)) {
         return res.status('403').json({
             error: "User is not authorized"

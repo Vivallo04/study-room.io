@@ -1,1 +1,12 @@
 node_modules
+
+# yarn & npm
+yarn-error.log
+yarn.lock
+
+package-lock.json
+nodemon.json
+
+# IDEs
+.vscode
+.idea
