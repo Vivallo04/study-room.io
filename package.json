@@ -41,7 +41,7 @@
     "webpack-shell-plugin-next": "^2.2.2"
   },
   "scripts": {
-    "development": "nodemon",
+    "development": "nodemon -o",
     "test": "jest",
     "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
     "deploy": "",

@@ -11,10 +11,9 @@ on:
 jobs: 
   test_pull_request: 
     runs-on: ${{matrix.os}}
-    strategy: 
-    matrix: 
+    matrix:
       os: [ubuntu-latest, windows-latest, macOS-lastest]
-    
+
     steps: 
       - uses: actions/checkout@v2
       - name: Use Node.js

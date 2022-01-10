@@ -11,6 +11,10 @@ mongoose.connect(config.mongoUri, {
     useUnifiedTopology: true
 });
 
+mongoose.connection.on('connected', () => {
+    console.log(`Successfully connected to the database: ${config.mongoUri}`);
+});
+
 mongoose.connection.on('error', () => {
     throw new Error(`Unable to connect to database: ${config.mongoUri}`);
 });

@@ -3,8 +3,7 @@ import jwt from 'jsonwebtoken';
 import expressJwt from 'express-jwt';
 import config from './../../config/config';
 
-
-// Four controller functioncs to handle the backend
+// Four controller functions to handle the backend
 // user auth using JSON Web Tokens
 const signin = async (req, res) => {
     try {
@@ -64,13 +63,11 @@ const signout = async (req, res) => {
  * is valid, append the verified user's ID to an 'auth' key 
  * to the request object. Otherwise, throw an error. 
  */
-// ExpressJWT Constructor
 const requireSignin = expressJwt({
     secret: config.jwtSecret,
     userProperty: 'auth', 
     algorithms: ['RS256']
 });
-
 
 const hasAuthorization = (req, res, next) => {
     const authorized = req.profile && req.auth && req.profile._id === req.auth._id;
@@ -81,6 +78,5 @@ const hasAuthorization = (req, res, next) => {
     }
     next();
 };
-
 
 export default {signin, signout, requireSignin, hasAuthorization};
