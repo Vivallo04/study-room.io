@@ -5,7 +5,6 @@
  * jwtSecret: The secret key to be used to sign JWT
  * mongoUri: The location of the MongoDB database instance
  */
-
 const config = {
     env: process.env.NODE_ENV || 'development', 
     port: process.env.PORT || 3000, 
