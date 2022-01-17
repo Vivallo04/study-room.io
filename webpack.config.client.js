@@ -1,12 +1,12 @@
-const { clear } = require('console')
-const path = require('path')
-const webpack = require('webpack')
-const CURRENT_WORKING_DIR = process.cwd()
+const { clear } = require('console');
+const path = require('path');
+const webpack = require('webpack');
+const CURRENT_WORKING_DIR = process.cwd();
 
 const config = {
     name: "browser",
     mode: "development",
-    devtool: 'cheap-module-source-map',
+    devtool: 'eval-source-map', // cheap-module-source-map
     entry: [
         'webpack-hot-middleware/client?reload=true',
         path.join(CURRENT_WORKING_DIR, 'client/main.js')

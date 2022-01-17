@@ -5,6 +5,7 @@ import {CardContent} from "@material-ui/core";
 import {CardMedia} from "@material-ui/core";
 import {Typography} from "@material-ui/core";
 import stlogo from './../assets/images/stlogo.png';
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
     card: {
@@ -34,6 +35,7 @@ export default function Home() {
                     Welcome to the Study-room dashboard
                 </Typography>
             </CardContent>
+            <Link to="/users">Users</Link>
         </Card>
     );
 };

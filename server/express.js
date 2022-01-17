@@ -5,13 +5,20 @@ import compress from 'compression'
 import cors from 'cors';
 import helmet from 'helmet';
 
-import template from './../template';
 import path from 'path';
 
 // Modules for the server side rendering
+import React from 'react';
 import authRoutes from './routes/auth.routes';
 import userRoutes from "./routes/user.routes";
-import devBundle from "./devBundle"; // only for development mode, please comment out on prod
+import devBundle from "./devBundle";
+import { ServerStyleSheets, ThemeProvider } from "@material-ui/core";
+import * as ReactDOMServer from "react-dom/server";
+import theme from "../client/theme";
+import MainRouter from "../client/MainRouter";
+import { StaticRouter } from "react-router-dom";
+import template from "../template";
+import App from "../client/App"; // only for development mode, please comment out on prod
 
 /**
  * To handle HTTP requests and server responses:
@@ -39,15 +46,17 @@ devBundle.compile(app); // only for development mode, please comment out on prod
 const CURRENT_WORKING_DIR = process.cwd();
 
 app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')));
-
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
-app.use('/', authRoutes);
-app.use('/', userRoutes);
+app.use(bodyParser.urlencoded({ extended:true }));
 app.use(cookieParser());
 app.use(compress());
 app.use(helmet());
 app.use(cors());
+
+
+app.use('/', authRoutes);
+app.use('/', userRoutes);
+//app.use('/', postRoutes);
 
 app.get('/', (req, res) => {
     res.status(200).send(template())
