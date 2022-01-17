@@ -14,6 +14,7 @@ const getUniqueErrorMessage = (error) => {
     return output;
 }
 
+
 /**
  * Get the error message from error object 
  * @param {*} error error name 

@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken';
 import expressJwt from 'express-jwt';
 import config from './../../config/config';
 
+
 // Four controller functions to handle the backend
 // user auth using JSON Web Tokens
 const signin = async (req, res) => {
@@ -21,7 +22,9 @@ const signin = async (req, res) => {
             });
         }
 
-        const token = jwt.sign({ _id: user._id}, config.jwtSecret);
+        const token = jwt.sign({
+            _id: user._id
+        }, config.jwtSecret);
 
         res.cookie('t', token, {
             expire: new Date() + 9999
