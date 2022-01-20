@@ -17,8 +17,8 @@ import * as ReactDOMServer from "react-dom/server";
 import theme from "../client/theme";
 import MainRouter from "../client/MainRouter";
 import { StaticRouter } from "react-router-dom";
-import template from "../template";
-import App from "../client/App"; // only for development mode, please comment out on prod
+import Template from "../template";
+// only for development mode, please comment out on prod
 
 /**
  * To handle HTTP requests and server responses:
@@ -59,7 +59,23 @@ app.use('/', userRoutes);
 //app.use('/', postRoutes);
 
 app.get('/', (req, res) => {
-    res.status(200).send(template())
+    const sheets = new ServerStyleSheets();
+    const context = {};
+    const markup = ReactDOMServer.renderToString(
+        sheets.collect(
+            <StaticRouter location={req.url} context={context}>
+                <ThemeProvider theme={theme}>
+                    <MainRouter/>
+                </ThemeProvider>
+            </StaticRouter> )
+    );
+    if (context.url) {
+        return res.redirect(303, context.url);
+    }
+    const css = sheets.toString();
+    res.status(200).send(Template({
+        markup: markup, css: css
+    }));
 });
 
 app.use((error, req, res, next ) => {

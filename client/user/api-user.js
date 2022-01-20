@@ -120,5 +120,4 @@ const remove = async(params, credentials) => {
     }
 };
 
-
-export { create, list, read, remove, update};
+export { create, list, read, remove, update };

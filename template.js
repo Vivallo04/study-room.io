@@ -1,4 +1,4 @@
-export default () => {
+export default ({markup, css}) => {
     return `<!doctype html>
       <html lang="en">
         <head>
@@ -8,8 +8,9 @@ export default () => {
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         </head>
         <body>
-          <div id="root">This site is currently in construction... >:)</div>
+          <div id="root">${markup}</div>
           <script type="text/javascript" src="/dist/bundle.js"></script>
+          <style id="jss-server-side">${css}</style
         </body>
       </html>`
 }

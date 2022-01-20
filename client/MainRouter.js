@@ -1,7 +1,8 @@
 import React from 'react';
-import { Route, Routes } from "react-router-dom";
-import Home from './core/Home';
+import { Route, Switch } from "react-router-dom";
+import Home  from './core/Home';
 import Users from "./user/User";
+import SignUp  from "./user/SignUp";
 
 
 /**
@@ -10,12 +11,13 @@ import Users from "./user/User";
  * @constructor None
  */
 const MainRouter = () => {
-  return ( <div>
-      <Routes>
-          <Route exact path="/" component={ Home }/>
-          <Route path="/users" component={ Users }/>
-      </Routes>
-  </div>)
-}
+  return (<div>
+      <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route path="/users"  component={Users}/>
+          <Route path="/signup" component={SignUp}/>
+      </Switch>
+  </div>);
+};
 
 export default MainRouter;

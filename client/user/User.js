@@ -1,17 +1,11 @@
-import {useEffect, useState} from "react";
-import {list} from "./api-user";
+import { useEffect, useState } from "react";
+import { list } from "./api-user";
 import React from 'react';
-import {
-  Avatar,
-  IconButton,
-  ListItem,
-  ListItemAvatar,
-  ListItemSecondaryAction,
-  ListItemText,
-  Paper,
-} from "@material-ui/core";
-import {ArrowForward, List, Person} from "@material-ui/icons";
-import {Link} from "react-router-dom";
+import { Avatar, IconButton, ListItem, ListItemAvatar,
+  ListItemSecondaryAction, ListItemText, Paper } from "@material-ui/core";
+import { ArrowForward, List, Person } from "@material-ui/icons";
+import { Link } from "react-router-dom";
+
 
 export default function Users() {
   const[users, setUsers] = useState([]);
