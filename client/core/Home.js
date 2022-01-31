@@ -1,11 +1,9 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card'
-import { CardContent } from "@material-ui/core";
-import { CardMedia } from "@material-ui/core";
-import { Typography } from "@material-ui/core";
-import stlogo from './../assets/images/stlogo.png';
-import { Link }  from "react-router-dom";
+import React from "react";
+import {makeStyles} from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import {CardContent} from "@material-ui/core";
+import {CardMedia} from "@material-ui/core";
+import {Typography} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     card: {
@@ -14,7 +12,8 @@ const useStyles = makeStyles(theme => ({
         marginTop: theme.spacing(5)
     },
     title: {
-        padding: `${theme.spacing(3)}px ${theme.spacing(2.5)}px ${theme.spacing(2)}px`,
+        padding:`${theme.spacing(3)}px ${theme.spacing(2.5)}px
+    ${theme.spacing(2)}px`,
         color: theme.palette.openTitle
     },
     media: {
@@ -26,16 +25,14 @@ export default function Home() {
     const classes = useStyles();
     return (
         <Card className={classes.card}>
-            <Typography variant={"h6"} className={classes.title}>
-                Home PAGE
+            <Typography variant="h6" className={classes.title}>
+                Home Page
             </Typography>
-            <CardMedia className={classes.media} image={stlogo} title={"Study-room Logo"}/>
             <CardContent>
                 <Typography variant={"body2"} component={"p"}>
-                    Welcome to the Study-room dashboard
+                    Welcome to the GO-GPS Home page
                 </Typography>
             </CardContent>
-            <Link to="/users">Users</Link>
         </Card>
     );
 };
