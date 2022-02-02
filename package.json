@@ -13,6 +13,7 @@
     "express-jwt": "^6.1.0",
     "helmet": "^4.6.0",
     "jsonwebtoken": "^8.5.1",
+    "lodash-extend": "^1.0.13",
     "mongodb": "^4.1.4",
     "mongoose": "5.9.7",
     "react": "^17.0.2",
@@ -45,7 +46,7 @@
   "engines": {
     "node": "16.13.0"
   },
-  "name": "go-gps-server",
+  "name": "studyroom",
   "version": "1.0.0",
   "main": "main.js",
   "author": "Andrés Vivallo",
