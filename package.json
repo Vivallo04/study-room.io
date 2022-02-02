@@ -40,7 +40,8 @@
   "scripts": {
     "development": "nodemon -o",
     "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
-    "start": "NODE_ENV=production node ./dist/server.generated.js"
+    "start": "NODE_ENV=production node ./dist/server.generated.js",
+    "heroku-postbuild": "cd client && yarn install --only=dev && yarn install && yarn build"
   },
   "name": "go-gps-server",
   "version": "1.0.0",
