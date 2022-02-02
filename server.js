@@ -5,7 +5,7 @@ import app from './express';
 
 // Configure Mongoose and define a connection with the MongoDB database
 mongoose.Promise = global.Promise;
-mongoose.connect(config.mongoUri, {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
