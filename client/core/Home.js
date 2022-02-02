@@ -2,7 +2,6 @@ import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import {CardContent} from "@material-ui/core";
-import {CardMedia} from "@material-ui/core";
 import {Typography} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
@@ -30,7 +29,7 @@ export default function Home() {
             </Typography>
             <CardContent>
                 <Typography variant={"body2"} component={"p"}>
-                    Welcome to the GO-GPS Home page
+                    Welcome to studyroom.io
                 </Typography>
             </CardContent>
         </Card>
