@@ -43,6 +43,9 @@
     "start": "NODE_ENV=production node ./dist/server.generated.js",
     "heroku-postbuild": "cd client && yarn install --only=dev && yarn install && yarn build"
   },
+  "engines": {
+    "node": "16.13.0"
+  },
   "name": "go-gps-server",
   "version": "1.0.0",
   "main": "main.js",
