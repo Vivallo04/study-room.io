@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CURRENT_WORKING_DIR = process.cwd();
 
 const config = {
@@ -21,8 +22,12 @@ const config = {
                 ]
             }
         ]
-    }
-
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+        favicon: "./assets/static/favicon.ico"
+    })
+    ],
 }
 
 module.exports = config;

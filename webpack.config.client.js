@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CURRENT_WORKING_DIR = process.cwd();
 
 const config = {
@@ -24,7 +25,10 @@ const config = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoEmitOnErrorsPlugin()
+        new webpack.NoEmitOnErrorsPlugin(),
+        new HtmlWebpackPlugin({
+            favicon: "./assets/static/favicon.ico"
+        })
     ],
     resolve: {
         alias: {
