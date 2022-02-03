@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
-import config from './config/config'
+import config from '../config/config'
 import app from './express';
 
 
 // Configure Mongoose and define a connection with the MongoDB database
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI, {
+    mongoose.connect(config.mongoUri, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
