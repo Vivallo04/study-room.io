@@ -24,7 +24,6 @@ switch (config.env) {
         break;
     case "production":
         environment = environmentProduction;
-
 }
 
 // Configure Mongoose and define a connection with the MongoDB database
