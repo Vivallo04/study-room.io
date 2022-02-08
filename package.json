@@ -40,7 +40,9 @@
     "nodemon": "^2.0.15"
   },
   "scripts": {
-    "development": "nodemon -o",
+    "development": "set NODE_ENV=development&& nodemon -o",
+    "integration": "set NODE_ENV=integration&& nodemon -o",
+    "stage": "set NODE_ENV=stage&& nodemon -o",
     "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
     "start": "NODE_ENV=production node ./dist/server.generated.js"
   },
