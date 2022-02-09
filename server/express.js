@@ -28,7 +28,7 @@ if (config.env === "development") {
     devBundle.compile(app);
 }
 
-// parse body params and attaché them to req.body
+// parse body params and attach them to req.body
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());

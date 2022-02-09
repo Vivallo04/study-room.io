@@ -1,4 +1,6 @@
-FROM node:16.13.0-stretch
+FROM node:16.13.0
+
+# ARG NODE_ENV=development
 
 # create /app directory
 WORKDIR /app

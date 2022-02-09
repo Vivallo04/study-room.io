@@ -14,16 +14,24 @@ let environment = environments;
 
 switch (config.env) {
     case "development":
+        console.info("Initializing " + `${config.env.toString()}` + " mode");
         environment = environmentDevelopment;
         break;
     case "integration":
+        console.info("Initializing " + `${config.env.toString()}` + " mode");
         environment = environmentIntegration;
         break;
     case "stage":
+        console.info("Initializing " + `${config.env.toString()}` + " mode");
         environment = environmentStage;
         break;
     case "production":
+        console.info("Initializing " + `${config.env.toString()}` + " mode");
         environment = environmentProduction;
+        break;
+    default:
+        console.info("Initializing " + `${config.env.toString()}` + " mode");
+        environment = environmentDevelopment;
 }
 
 // Configure Mongoose and define a connection with the MongoDB database

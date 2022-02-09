@@ -1,24 +1,26 @@
 version: '1'
+
 services:
-  web:
-    build: .
-    command:
-      - yarn development
+  web-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: study-room-dev
+    container_name: study-room-node
     volumes:
       - /app
+      - /app/node_modules
     ports:
       - "3000:3000"
     depends_on:
       - mongodb
     environment:
-      DATABASE_URL: mongodb://localhost:27017
-
+      - MONGO_HOSTNAME=localhost
+      - MONGO_PORT=27017
+      - MONGO_DB=studyroom-development
   mongodb:
     image: mongo
-    container_name: mongodb
-    environment:
-      - MONGO_USER: go-gps
-      - MONGO_DB: user
+    container_name: study-room-mongodb
     ports:
-      - 27017:27017
+      - "27017:27017"
     restart: unless-stopped
