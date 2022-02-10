@@ -45,12 +45,18 @@
     "integration": "set NODE_ENV=integration&& nodemon -o",
     "stage": "set NODE_ENV=stage&& nodemon -o",
     "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
-    "start": "NODE_ENV=production node ./dist/server.generated.js"
+    "lint": "",
+    "test": "",
+    "test:ci": "",
+    "posttest": "",
+    "start-integration": "NODE_ENV=integration node ./dist/server.generated.js",
+    "start-stage": "NODE_ENV=stage node ./dist/server.generated.js",
+    "start-production": "NODE_ENV=production node ./dist/server.generated.js"
   },
   "engines": {
     "node": "16.13.0"
   },
-  "name": "studyroom",
+  "name": "study-room.io",
   "version": "1.0.0",
   "main": "main.js",
   "author": "Andrés Vivallo",
