@@ -51,7 +51,10 @@
     "posttest": "",
     "start-integration": "NODE_ENV=integration node ./dist/server.generated.js",
     "start-stage": "NODE_ENV=stage node ./dist/server.generated.js",
-    "start-production": "NODE_ENV=production node ./dist/server.generated.js"
+    "start-production": "NODE_ENV=production node ./dist/server.generated.js",
+    "deploy:integration": "git push heroku studyroom-heroku-integration:master",
+    "deploy:stage": "git push heroku studyroom-heroku-stage:master",
+    "deploy:production": "git push heroku master"
   },
   "engines": {
     "node": "16.13.0"
