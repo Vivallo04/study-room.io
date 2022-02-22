@@ -7,11 +7,12 @@ import Signin from './auth/Signin'
 import EditProfile from './user/EditProfile'
 import Profile from './user/Profile'
 import PrivateRoute from './auth/PrivateRoute'
-import Menu from './core/Menu'
+import ResponsiveAppBar from "./core/ResponsiveAppBar";
 
 const MainRouter = () => {
-    return (<div>
-        <Menu/>
+    return (
+    <div>
+        <ResponsiveAppBar/>
         <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/users" component={Users}/>

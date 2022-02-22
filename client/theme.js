@@ -6,7 +6,7 @@ const theme = createTheme({
         useNextVariants: true,
         fontFamily: [
             "Coolvetica",
-            "Arial"
+            "Nunito-Regular"
         ]
     },
     palette: {

@@ -4,6 +4,7 @@ import Card from "@material-ui/core/Card";
 import {CardContent} from "@material-ui/core";
 import {Typography} from "@material-ui/core";
 
+
 const useStyles = makeStyles(theme => ({
     card: {
         maxWidth: 600,
@@ -11,9 +12,12 @@ const useStyles = makeStyles(theme => ({
         marginTop: theme.spacing(5)
     },
     title: {
-        padding:`${theme.spacing(3)}px ${theme.spacing(2.5)}px
-    ${theme.spacing(2)}px`,
+        padding:`${theme.spacing(4)}px ${theme.spacing(3.5)}px
+    ${theme.spacing(3)}px`,
         color: theme.palette.openTitle
+    },
+    paragraphs: {
+        font: "Nunito-Regular"
     },
     media: {
         minHeight: 400
@@ -28,7 +32,7 @@ export default function Home() {
                 Home Page
             </Typography>
             <CardContent>
-                <Typography variant={"body2"} component={"p"}>
+                <Typography className={classes.paragraphs}>
                     Welcome to studyroom.io
                 </Typography>
             </CardContent>
