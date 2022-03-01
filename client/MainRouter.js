@@ -21,7 +21,7 @@ const MainRouter = () => {
             <PrivateRoute path="/user/edit/:userId" component={EditProfile}/>
             <Route path="/user/:userId" component={Profile}/>
         </Switch>
-    </div>)
+    </div>);
 }
 
-export default MainRouter
+export default MainRouter;
