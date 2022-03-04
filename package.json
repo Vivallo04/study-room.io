@@ -40,16 +40,31 @@
     "@material-ui/styles": "^4.11.4",
     "babel-loader": "^8.2.3",
     "eslint": "^8.8.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-file-progress": "^1.2.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0",
     "jest": "^27.3.1",
     "lodash": "^4.17.21",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "prettier": "2.5.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "scripts": {
     "development": "set NODE_ENV=development&& nodemon -o",
     "integration": "set NODE_ENV=integration&& nodemon -o",
     "stage": "set NODE_ENV=stage&& nodemon -o",
     "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
-    "lint": "",
+    "lint": "npx eslint .",
     "test": "",
     "test:ci": "",
     "posttest": "",

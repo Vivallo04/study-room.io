@@ -7,12 +7,12 @@ import Signin from './auth/Signin'
 import EditProfile from './user/EditProfile'
 import Profile from './user/Profile'
 import PrivateRoute from './auth/PrivateRoute'
-import ResponsiveAppBar from "./core/ResponsiveAppBar";
+import { AppBar } from '@material-ui/core'
 
 const MainRouter = () => {
     return (
     <div>
-        <ResponsiveAppBar/>
+        <AppBar/>
         <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/users" component={Users}/>

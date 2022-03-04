@@ -1,37 +1,38 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "eslint:recommended"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "parserOptions": {
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "ecmaVersion": 12,
+  "sourceType": "module"
+  },
+  "plugins": ["react", "prettier", "file-progress"],
+  "rules": {
+    "file-progress/activate": 1, 
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
     ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
+    "default-param-last": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-props-no-spreading": [
+      1,
+      {
+        "custom": "ignore"
+      }
     ],
-    "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "double"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
-    }
+    "react/jsx-curly-spacing": [2, "never"]
+  },
+  "ignorePatterns": ["webpack.config.client.js", "server.generated.js", 
+    "webpack.config.client.production.js", "webpack.config.server.js"],
+  "settings": { "import/resolver": { "node": { "paths": ["src"] } } }
 }
+  
